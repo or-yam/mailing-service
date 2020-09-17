@@ -14,7 +14,7 @@ An HTTP server to manage mailing providers, templates and sending emails
 ## Usage
 ### As a Docker container
 ```sh
-$ docker run -p 3001:3001 greenpress/assets
+$ docker run -p 3001:3001 greenpress/mailing
 ```
 ### As Node package
 ```sh

@@ -2,8 +2,7 @@
 
 An HTTP server to manage mailing providers, templates and sending emails
 
-[![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/greenpress/assets%2Fmaster?type=cf-1)]( https%3A%2F%2Fg.codefresh.io%2Fpublic%2Faccounts%2Fgreenpress%2Fpipelines%2Fnew%2F5e5bf20c316fada35548c822)
-[![npm version](https://badge.fury.io/js/%40greenpress%2Fassets.svg)](https://badge.fury.io/js/%40greenpress%2Fassets)
+[![npm version](https://badge.fury.io/js/%40greenpress%2Fmailing.svg)](https://badge.fury.io/js/%40greenpress%2Fmailing)
 
 ## Dependencies
 - Node.js

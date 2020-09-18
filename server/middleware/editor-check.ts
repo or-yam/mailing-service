@@ -2,7 +2,7 @@ const { editorsRoles } = require('../../config');
 /**
  *  The Auth Checker middleware function.
  */
-module.exports = (req, res, next) => {
+export default (req, res, next) => {
   if (!req.user) {
     return res.status(401).end();
   }

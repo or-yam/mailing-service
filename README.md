@@ -18,7 +18,7 @@ $ docker run -p 3001:3001 greenpress/mailing
 ```
 ### As Node package
 ```sh
-$ npm i @greenpress/assets
+$ npm i @greenpress/mailing
 $ npx greenpress-mailing
 ```
 

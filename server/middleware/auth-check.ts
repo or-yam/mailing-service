@@ -3,7 +3,7 @@ const authService = require('@greenpress/api-kit/internal-service').service('AUT
 /**
  *  The Auth Checker middleware function.
  */
-module.exports = (req, res, next) => {
+export default (req, res, next) => {
   if (!req.headers.authorization) {
     return res.status(401).end()
   }
@@ -19,6 +19,6 @@ module.exports = (req, res, next) => {
       return next()
     })
     .catch(() => {
-      return res.status(401).end()
+      res.status(401).end()
     })
 }

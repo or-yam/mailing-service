@@ -1,7 +1,17 @@
-const mongoose = require('mongoose')
+import mongoose, {Document} from 'mongoose'
+
+export interface IEmailProvider extends Document {
+  tenant: string;
+  kind: 'smtp';
+  name: string;
+  metadata: {
+    from: string;
+  };
+  authentication: string;
+}
 
 // define the Provider model schema
-const EmailProviderSchema = new mongoose.Schema({
+const EmailProviderSchema = new mongoose.Schema<IEmailProvider>({
   tenant: {
     type: String,
     index: true,
@@ -26,4 +36,4 @@ const EmailProviderSchema = new mongoose.Schema({
   authentication: String
 })
 
-module.exports = mongoose.model('EmailProvider', EmailProviderSchema)
+export default mongoose.model<IEmailProvider>('EmailProvider', EmailProviderSchema)

@@ -22,4 +22,4 @@ const EmailTemplateSchema = new mongoose.Schema({
   authentication: String
 })
 
-module.exports = mongoose.model('EmailTemplate', EmailTemplateSchema)
+export default mongoose.model('EmailTemplate', EmailTemplateSchema)

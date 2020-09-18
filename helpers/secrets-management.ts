@@ -1,7 +1,7 @@
 const { internalServicesSecret, secretsToken } = require('../config')
 const secretsService = require('@greenpress/api-kit/internal-service').service('SECRETS');
 
-function callSecretsService (url, tenant, key, value) {
+function callSecretsService (url: string, tenant: string, key: string, value?: any) {
   return secretsService({
     headers: { internal_secret: internalServicesSecret, tenant },
     method: 'POST',
@@ -12,15 +12,13 @@ function callSecretsService (url, tenant, key, value) {
     },
     url
   })
-    .then(axiosRes => axiosRes.data)
+    .then((axiosRes: any) => axiosRes.data)
 }
 
-function getSecret (tenant, key) {
+export function getSecret (tenant: string, key: string) {
   return callSecretsService('/api/secrets/get', tenant, key)
 }
 
-function setSecret (tenant, key, value) {
+export function setSecret (tenant: string, key: string, value: any) {
   return callSecretsService('/api/secrets/set', tenant, key, value)
 }
-
-module.exports = { getSecret, setSecret }

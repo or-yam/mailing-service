@@ -1,6 +1,6 @@
 {
   "name": "@greenpress/mailing",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "author": "David Meir-Levy <davidmeirlevy@gmail.com>",
   "description": "manage mailing operations",
@@ -12,6 +12,7 @@
     "node": ">=10.5"
   },
   "scripts": {
+    "prepublish": "tsc",
     "postinstall": "tsc",
     "start": "node --use_strict dist/index.js"
   },
